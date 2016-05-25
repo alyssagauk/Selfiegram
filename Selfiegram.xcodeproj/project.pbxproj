@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */; };
 		FDB980511CEEA6950026DE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB980501CEEA6950026DE41 /* AppDelegate.swift */; };
 		FDB980531CEEA6950026DE41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB980521CEEA6950026DE41 /* ViewController.swift */; };
 		FDB980561CEEA6950026DE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB980541CEEA6950026DE41 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FDB9804D1CEEA6950026DE41 /* Selfiegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfiegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB980501CEEA6950026DE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB980521CEEA6950026DE41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				FDB980501CEEA6950026DE41 /* AppDelegate.swift */,
 				FDB980521CEEA6950026DE41 /* ViewController.swift */,
 				FDB980541CEEA6950026DE41 /* Main.storyboard */,
+				FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */,
 				FDB980571CEEA6950026DE41 /* Assets.xcassets */,
 				FDB980591CEEA6950026DE41 /* LaunchScreen.storyboard */,
 				FDB9805C1CEEA6950026DE41 /* Info.plist */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					FDB9804C1CEEA6950026DE41 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5BFKEYP34C;
 					};
 					FDB980601CEEA6950026DE41 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */,
 				FDB980531CEEA6950026DE41 /* ViewController.swift in Sources */,
 				FDB980511CEEA6950026DE41 /* AppDelegate.swift in Sources */,
 			);
@@ -401,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Selfiegram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LighthouseLabs.Selfiegram;
+				PRODUCT_BUNDLE_IDENTIFIER = Alyssa.LighthouseLabs.Selfiegram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Selfiegram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LighthouseLabs.Selfiegram;
+				PRODUCT_BUNDLE_IDENTIFIER = Alyssa.LighthouseLabs.Selfiegram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +495,7 @@
 				FDB980771CEEA6950026DE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDB980781CEEA6950026DE41 /* Build configuration list for PBXNativeTarget "SelfiegramTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +504,7 @@
 				FDB9807A1CEEA6950026DE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDB9807B1CEEA6950026DE41 /* Build configuration list for PBXNativeTarget "SelfiegramUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +513,7 @@
 				FDB9807D1CEEA6950026DE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="dEZ-8T-pHC">
             <objects>
-                <viewController id="qax-5T-fun" sceneMemberID="viewController">
+                <viewController id="qax-5T-fun" customClass="ProfileViewController" customModule="Selfiegram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lxT-I7-cal"/>
                         <viewControllerLayoutGuide type="bottom" id="7C7-OX-b4G"/>
@@ -16,13 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="a8H-Kq-2zk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-RW-Ty7">
+                                <rect key="frame" x="207" y="285" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="qax-5T-fun" eventType="touchUpInside" id="rts-jC-zJP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-yM-CCD">
+                                <rect key="frame" x="210" y="110" width="180" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="Us3-tY-tYA"/>
+                                    <constraint firstAttribute="width" constant="180" id="lcC-Yk-J7J"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slg-ph-Grb">
+                                <rect key="frame" x="279" y="303" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="slg-ph-Grb" firstAttribute="centerX" secondItem="a8H-Kq-2zk" secondAttribute="centerX" id="Fce-a3-ht8"/>
+                            <constraint firstItem="oBs-RW-Ty7" firstAttribute="top" secondItem="WVr-yM-CCD" secondAttribute="bottom" constant="-10" id="InZ-if-LVg"/>
+                            <constraint firstItem="WVr-yM-CCD" firstAttribute="top" secondItem="lxT-I7-cal" secondAttribute="bottom" constant="46" id="OfE-Dv-fcm"/>
+                            <constraint firstItem="WVr-yM-CCD" firstAttribute="leading" secondItem="oBs-RW-Ty7" secondAttribute="trailing" constant="-51" id="ayp-HT-QDC"/>
+                            <constraint firstItem="WVr-yM-CCD" firstAttribute="centerX" secondItem="a8H-Kq-2zk" secondAttribute="centerX" id="lO6-PM-9ZE"/>
+                            <constraint firstItem="WVr-yM-CCD" firstAttribute="top" secondItem="lxT-I7-cal" secondAttribute="bottom" constant="46" id="nKT-yA-hzs"/>
+                            <constraint firstItem="slg-ph-Grb" firstAttribute="top" secondItem="WVr-yM-CCD" secondAttribute="bottom" constant="8" id="zbT-pw-KqI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0YM-W4-Dl3"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="WVr-yM-CCD" id="jic-IM-tV3"/>
+                        <outlet property="usernameLabel" destination="slg-ph-Grb" id="rdK-Aa-9EW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugp-ny-lnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915" y="571"/>
+            <point key="canvasLocation" x="944" y="592"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="pBx-Jz-jaQ">
@@ -172,5 +207,6 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
