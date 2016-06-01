@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0E21FF1CFE805C00A9639A /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E21FE1CFE805C00A9639A /* FeedTableViewController.swift */; };
 		FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */; };
+		FD8C88231CFE52E700B6B264 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C88221CFE52E700B6B264 /* User.swift */; };
+		FD8C88251CFE5ADC00B6B264 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C88241CFE5ADC00B6B264 /* Post.swift */; };
 		FDB980511CEEA6950026DE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB980501CEEA6950026DE41 /* AppDelegate.swift */; };
 		FDB980531CEEA6950026DE41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB980521CEEA6950026DE41 /* ViewController.swift */; };
 		FDB980561CEEA6950026DE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB980541CEEA6950026DE41 /* Main.storyboard */; };
@@ -35,7 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD0E21FE1CFE805C00A9639A /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FD8C88221CFE52E700B6B264 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FD8C88241CFE5ADC00B6B264 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FDB9804D1CEEA6950026DE41 /* Selfiegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selfiegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB980501CEEA6950026DE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB980521CEEA6950026DE41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 		FDB980441CEEA6950026DE41 = {
 			isa = PBXGroup;
 			children = (
+				FD0E21FE1CFE805C00A9639A /* FeedTableViewController.swift */,
+				FD8C88221CFE52E700B6B264 /* User.swift */,
+				FD8C88241CFE5ADC00B6B264 /* Post.swift */,
 				FDB9804F1CEEA6950026DE41 /* Selfiegram */,
 				FDB980641CEEA6950026DE41 /* SelfiegramTests */,
 				FDB9806F1CEEA6950026DE41 /* SelfiegramUITests */,
@@ -260,9 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8C88231CFE52E700B6B264 /* User.swift in Sources */,
+				FD0E21FF1CFE805C00A9639A /* FeedTableViewController.swift in Sources */,
 				FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */,
 				FDB980531CEEA6950026DE41 /* ViewController.swift in Sources */,
 				FDB980511CEEA6950026DE41 /* AppDelegate.swift in Sources */,
+				FD8C88251CFE5ADC00B6B264 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
