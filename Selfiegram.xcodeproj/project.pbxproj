@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD0E21FF1CFE805C00A9639A /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E21FE1CFE805C00A9639A /* FeedTableViewController.swift */; };
+		FD29BAE01D01285F0060CD75 /* SelfieCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29BADF1D01285F0060CD75 /* SelfieCellTableViewCell.swift */; };
 		FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */; };
 		FD8C88231CFE52E700B6B264 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C88221CFE52E700B6B264 /* User.swift */; };
 		FD8C88251CFE5ADC00B6B264 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C88241CFE5ADC00B6B264 /* Post.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		FD0E21FE1CFE805C00A9639A /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		FD29BADF1D01285F0060CD75 /* SelfieCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieCellTableViewCell.swift; sourceTree = "<group>"; };
 		FD7E22121CF5470100DAB3B5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FD8C88221CFE52E700B6B264 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD8C88241CFE5ADC00B6B264 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				FD0E21FE1CFE805C00A9639A /* FeedTableViewController.swift */,
+				FD29BADF1D01285F0060CD75 /* SelfieCellTableViewCell.swift */,
 				FD8C88221CFE52E700B6B264 /* User.swift */,
 				FD8C88241CFE5ADC00B6B264 /* Post.swift */,
 				FDB9804F1CEEA6950026DE41 /* Selfiegram */,
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD29BAE01D01285F0060CD75 /* SelfieCellTableViewCell.swift in Sources */,
 				FD8C88231CFE52E700B6B264 /* User.swift in Sources */,
 				FD0E21FF1CFE805C00A9639A /* FeedTableViewController.swift in Sources */,
 				FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */,

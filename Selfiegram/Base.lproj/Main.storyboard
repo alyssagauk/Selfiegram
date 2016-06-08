@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Profile View Controller-->
@@ -34,7 +35,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slg-ph-Grb">
                                 <rect key="frame" x="279" y="303" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -63,18 +64,118 @@
         <scene sceneID="pBx-Jz-jaQ">
             <objects>
                 <tableViewController id="kwu-y8-crd" customClass="FeedViewController" customModule="Selfiegram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j40-Rw-2On">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" sectionHeaderHeight="28" sectionFooterHeight="28" id="j40-Rw-2On">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="SOy-ER-b9H">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="320" id="SOy-ER-b9H" customClass="SelfieCellTableViewCell" customModule="Selfiegram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SOy-ER-b9H" id="kDP-kT-znj">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="319.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SY4-c6-NLn">
+                                            <rect key="frame" x="8" y="16" width="584" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="600" id="P92-hC-sTF"/>
+                                                <constraint firstAttribute="height" constant="250" id="UeW-XJ-HMj"/>
+                                                <constraint firstAttribute="height" constant="250" id="xZ8-as-WUl"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="P92-hC-sTF"/>
+                                                    <exclude reference="UeW-XJ-HMj"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Wy-ZsR">
+                                            <rect key="frame" x="8" y="298" width="75" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT5-r4-Upj">
+                                            <rect key="frame" x="8" y="274" width="79" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" constant="8" id="0ol-j8-ZU1"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="top" secondItem="DT5-r4-Upj" secondAttribute="bottom" constant="8" id="3ev-D8-RND"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="SY4-c6-NLn" secondAttribute="bottom" constant="8" id="5Pk-59-u8t"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SY4-c6-NLn" secondAttribute="trailing" constant="52" id="78d-dM-C8u"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="8Pi-Dl-wiu"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" id="Ad4-rf-EyK"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="BGg-TN-Cvc"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="top" secondItem="DT5-r4-Upj" secondAttribute="bottom" constant="8" id="Bpj-Ry-6MO"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="E4R-YO-Drp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SY4-c6-NLn" secondAttribute="trailing" constant="52" id="Gl2-9G-bec"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="trailing" secondItem="kDP-kT-znj" secondAttribute="trailingMargin" id="HrS-yQ-Vuj"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="HwX-yY-MSS"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="IB0-ue-9jm"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="Pdk-8R-Moy"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="Q3X-jp-cme"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" id="QxX-wz-Q1y"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="U6o-5I-mO8"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" constant="8" id="VMw-Gx-72t"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" id="Xtq-Y4-zdF"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" constant="8" id="a62-SK-pDf"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="top" secondItem="DT5-r4-Upj" secondAttribute="bottom" constant="8" id="aC4-ZJ-ugY"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" id="bRC-oA-QqV"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="bwA-Tv-qHJ"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="cvE-rC-BW7"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="dtX-HG-n2e"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="SY4-c6-NLn" secondAttribute="bottom" constant="8" id="grN-Av-aGi"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="jBt-hh-Fj4"/>
+                                        <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="jhp-Px-7Jh"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="l9O-g8-e02"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" constant="8" id="lOO-Dz-aKG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SY4-c6-NLn" secondAttribute="trailing" id="lmg-ye-ocn"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SY4-c6-NLn" secondAttribute="trailing" id="mpN-Kq-2ll"/>
+                                        <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="top" secondItem="DT5-r4-Upj" secondAttribute="bottom" constant="3.5" id="qNt-Yt-SMK"/>
+                                        <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="SY4-c6-NLn" secondAttribute="bottom" constant="8" id="uEl-9W-pfm"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="78d-dM-C8u"/>
+                                            <exclude reference="Ad4-rf-EyK"/>
+                                            <exclude reference="E4R-YO-Drp"/>
+                                            <exclude reference="Gl2-9G-bec"/>
+                                            <exclude reference="HwX-yY-MSS"/>
+                                            <exclude reference="Q3X-jp-cme"/>
+                                            <exclude reference="QxX-wz-Q1y"/>
+                                            <exclude reference="U6o-5I-mO8"/>
+                                            <exclude reference="Xtq-Y4-zdF"/>
+                                            <exclude reference="bRC-oA-QqV"/>
+                                            <exclude reference="lmg-ye-ocn"/>
+                                            <exclude reference="mpN-Kq-2ll"/>
+                                            <exclude reference="0ol-j8-ZU1"/>
+                                            <exclude reference="5Pk-59-u8t"/>
+                                            <exclude reference="BGg-TN-Cvc"/>
+                                            <exclude reference="IB0-ue-9jm"/>
+                                            <exclude reference="a62-SK-pDf"/>
+                                            <exclude reference="bwA-Tv-qHJ"/>
+                                            <exclude reference="l9O-g8-e02"/>
+                                            <exclude reference="lOO-Dz-aKG"/>
+                                            <exclude reference="uEl-9W-pfm"/>
+                                            <exclude reference="3ev-D8-RND"/>
+                                            <exclude reference="8Pi-Dl-wiu"/>
+                                            <exclude reference="Bpj-Ry-6MO"/>
+                                            <exclude reference="aC4-ZJ-ugY"/>
+                                            <exclude reference="cvE-rC-BW7"/>
+                                            <exclude reference="jBt-hh-Fj4"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="Xcc-Wy-ZsR" id="PBC-Mi-2OZ"/>
+                                    <outlet property="selfieImageView" destination="SY4-c6-NLn" id="wFx-k9-OVP"/>
+                                    <outlet property="usernameLabel" destination="DT5-r4-Upj" id="xOe-IT-Tw7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -82,7 +183,16 @@
                             <outlet property="delegate" destination="kwu-y8-crd" id="aAf-Ij-T8Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dOv-rJ-fgC"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dOv-rJ-fgC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="gJm-09-yLg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="kwu-y8-crd" id="KVj-UJ-j4F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0g-nB-604" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
