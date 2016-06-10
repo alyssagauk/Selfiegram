@@ -6,6 +6,8 @@
 //  Copyright © 2016 Alyssa Gauk. All rights reserved.
 //
 
+import Parse
+
 import UIKit
 
 @UIApplicationMain
@@ -13,11 +15,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+   
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Parse.setApplicationId("2ZERmKVQgV0tnmkU02WIanr2Cny1huYToK5jD3Iq",
+                               clientKey: "gRSlcs7EB2jL7n53pgNK3qXhIa7KmZVgfxMA5PLt")
+        
+        
+        let user = PFUser()
+        let username = "alyssa"
+        let password = "gauk"
+        user.username = username
+        user.password = password
+        user.signUpInBackgroundWithBlock { (success, error) -> Void in
+            if success {
+                print("successfully signed up a user")
+            }else {
+                PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+                    if let user = user {
+                        print("successfully logged in \(user)")
+                    }
+                })
+            }
+        }
+
+        
+        
         return true
     }
+
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -6,6 +6,8 @@
 //  Copyright © 2016 Alyssa Gauk. All rights reserved.
 //
 
+import Parse
+
 import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -14,8 +16,29 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var usernameLabel: UILabel!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let user = PFUser.currentUser(){
+            usernameLabel.text = user.username
+            
+            if let imageFile = user["avatarImage"] as? PFFile {
+                
+                imageFile.getDataInBackgroundWithBlock({ (data, error) -> Void in
+                    if let imageData = data {
+                        self.profileImageView.image = UIImage(data: imageData)
+                    }
+                })
+            }
+        }
+    }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
         
@@ -56,12 +79,27 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         // 1. When the delegate method is returned, it passes along a dictionary called info.
-        //    This dictionary contains multiple things that maybe useful to us.
-        //    We are getting an image from the UIImagePickerControllerOriginalImage key in that dictionary
+        //    This dictionary contains multiple things that may be useful to us.
+        //    We are getting the image from the UIImagePickerControllerOriginalImage key in that dictionary
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
-            //2. To our imageView, we set the image property to be the image the user has chosen
-            profileImageView.image = image
+            // setting the compression quality to 90%
+            if let imageData = UIImageJPEGRepresentation(image, 0.9),
+                let imageFile = PFFile(data: imageData),
+                let user = PFUser.currentUser(){
+                
+                // avatarImage is a new column in our User table
+                user["avatarImage"] = imageFile
+                user.saveInBackgroundWithBlock({ (success, error) -> Void in
+                    if success {
+                        // set our profileImageView to be the image we have picked
+                        let image = UIImage(data: imageData)
+                        self.profileImageView.image = image
+                    }
+                })
+                
+            }
+            
             
         }
         
@@ -69,6 +107,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismissViewControllerAnimated(true, completion: nil)
         
     }
+
     
     
     override func didReceiveMemoryWarning() {
