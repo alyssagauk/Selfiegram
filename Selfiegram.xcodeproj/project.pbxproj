@@ -20,6 +20,7 @@
 		FDB9805B1CEEA6950026DE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB980591CEEA6950026DE41 /* LaunchScreen.storyboard */; };
 		FDB980661CEEA6950026DE41 /* SelfiegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB980651CEEA6950026DE41 /* SelfiegramTests.swift */; };
 		FDB980711CEEA6950026DE41 /* SelfiegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB980701CEEA6950026DE41 /* SelfiegramUITests.swift */; };
+		FDF929111D139ED700A7C246 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF929101D139ED700A7C246 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FDB9806C1CEEA6950026DE41 /* SelfiegramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfiegramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB980701CEEA6950026DE41 /* SelfiegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfiegramUITests.swift; sourceTree = "<group>"; };
 		FDB980721CEEA6950026DE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF929101D139ED700A7C246 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				FD29BADF1D01285F0060CD75 /* SelfieCellTableViewCell.swift */,
 				FD8C88221CFE52E700B6B264 /* User.swift */,
 				FD8C88241CFE5ADC00B6B264 /* Post.swift */,
+				FDF929101D139ED700A7C246 /* Activity.swift */,
 				FDB9804F1CEEA6950026DE41 /* Selfiegram */,
 				FDB980641CEEA6950026DE41 /* SelfiegramTests */,
 				FDB9806F1CEEA6950026DE41 /* SelfiegramUITests */,
@@ -353,6 +356,7 @@
 				FD7E22131CF5470100DAB3B5 /* ProfileViewController.swift in Sources */,
 				FDB980531CEEA6950026DE41 /* ViewController.swift in Sources */,
 				FDB980511CEEA6950026DE41 /* AppDelegate.swift in Sources */,
+				FDF929111D139ED700A7C246 /* Activity.swift in Sources */,
 				FD8C88251CFE5ADC00B6B264 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

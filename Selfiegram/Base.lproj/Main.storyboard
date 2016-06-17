@@ -102,6 +102,18 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-Nk-uS9">
+                                            <rect key="frame" x="559" y="266" width="33" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="g7f-lx-KDm"/>
+                                                <constraint firstAttribute="width" constant="23" id="u4z-4u-IoV"/>
+                                            </constraints>
+                                            <state key="normal" image="hearts-off"/>
+                                            <state key="selected" image="hearts-on"/>
+                                            <connections>
+                                                <action selector="likeButtonClicked:" destination="SOy-ER-b9H" eventType="touchUpInside" id="dWg-f7-eXt"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" constant="8" id="0ol-j8-ZU1"/>
@@ -109,6 +121,7 @@
                                         <constraint firstItem="DT5-r4-Upj" firstAttribute="top" secondItem="SY4-c6-NLn" secondAttribute="bottom" constant="8" id="5Pk-59-u8t"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="SY4-c6-NLn" secondAttribute="trailing" constant="52" id="78d-dM-C8u"/>
                                         <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="8Pi-Dl-wiu"/>
+                                        <constraint firstItem="h5e-Nk-uS9" firstAttribute="top" secondItem="SY4-c6-NLn" secondAttribute="bottom" constant="8" id="9pT-uS-uDv"/>
                                         <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" id="Ad4-rf-EyK"/>
                                         <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="BGg-TN-Cvc"/>
                                         <constraint firstItem="Xcc-Wy-ZsR" firstAttribute="top" secondItem="DT5-r4-Upj" secondAttribute="bottom" constant="8" id="Bpj-Ry-6MO"/>
@@ -117,6 +130,7 @@
                                         <constraint firstItem="SY4-c6-NLn" firstAttribute="trailing" secondItem="kDP-kT-znj" secondAttribute="trailingMargin" id="HrS-yQ-Vuj"/>
                                         <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="HwX-yY-MSS"/>
                                         <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="IB0-ue-9jm"/>
+                                        <constraint firstItem="h5e-Nk-uS9" firstAttribute="trailing" secondItem="kDP-kT-znj" secondAttribute="trailingMargin" id="KaN-Gp-apI"/>
                                         <constraint firstItem="DT5-r4-Upj" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="Pdk-8R-Moy"/>
                                         <constraint firstItem="SY4-c6-NLn" firstAttribute="leading" secondItem="kDP-kT-znj" secondAttribute="leadingMargin" id="Q3X-jp-cme"/>
                                         <constraint firstItem="SY4-c6-NLn" firstAttribute="top" secondItem="kDP-kT-znj" secondAttribute="topMargin" id="QxX-wz-Q1y"/>
@@ -173,6 +187,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentLabel" destination="Xcc-Wy-ZsR" id="PBC-Mi-2OZ"/>
+                                    <outlet property="likeButton" destination="h5e-Nk-uS9" id="ohs-w1-lW4"/>
                                     <outlet property="selfieImageView" destination="SY4-c6-NLn" id="wFx-k9-OVP"/>
                                     <outlet property="usernameLabel" destination="DT5-r4-Upj" id="xOe-IT-Tw7"/>
                                 </connections>
@@ -317,6 +332,8 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="hearts-off" width="42" height="37"/>
+        <image name="hearts-on" width="42" height="37"/>
         <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
